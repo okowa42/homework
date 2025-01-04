@@ -36,6 +36,7 @@ data: 'bitcoin_price: 97995.0 USD'
 data: 'bitcoin_price: 97995.0 USD'
 ---
 data: 'bitcoin_price: 97995.0 USD'
+---
 ```
 
 ## 注意点
