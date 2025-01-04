@@ -3,11 +3,11 @@
 
 ## 概要
 - ROS 2のパッケージです.
-- [CoinGecko](https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd)より取得したビットコインの現在の米ドル価格をトピックにパブリッシュします.
+- [CoinGecko](https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd)から取得したビットコインの現在の米ドル価格をトピックにパブリッシュします.
 
 ## ノード
 - ### bitcoin_publisher
-取得したビットコインの現在の米ドル価格を10秒ごとにbitcoin_priceトピックにパブリッシュします．
+取得したビットコインの現在の米ドル価格を10秒毎にbitcoin_priceトピックにパブリッシュします．
 
 ## トピック
 - ### bitcoin_price
@@ -28,8 +28,9 @@ ros2 run homework bitcoin_publisher
 ```
 トピックの内容は以下のコマンドで確認できます.
 ```
-ros2 topic echo /bitcoin_price 
+ros2 topic echo /bitcoin_price
 ```
+トピックの内容の例です.
 ```
 data: 'bitcoin_price: 97905.0 USD'
 ---
