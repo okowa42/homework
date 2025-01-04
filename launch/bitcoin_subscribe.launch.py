@@ -1,4 +1,5 @@
-# SPDX-FileCopyrightText: 2025 AkariHirohara <a.hirohara.0526@gmail.com># SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2025 AkariHirohara <a.hirohara.0526@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
 
 import launch
 import launch.actions
