@@ -7,7 +7,7 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    bitcoin_publisher = launch_ros.actionis.Node(
+    bitcoin_publisher = launch_ros.actions.Node(
             package='homework',
             executable='bitcoin_publisher',
             name='bitcoin_publisher_node',

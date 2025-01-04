@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'bitcoin_publisher = homework.bitcoin_publisher:main',
+            'subscriber = homework.subscriber:main',
         ],
     },
 )
