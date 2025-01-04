@@ -8,9 +8,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build || { echo "Build failed"; exit 1; }
 source $dir/.bashrc
-timeout 30 ros2 run homework bitcoin_publisher > /tmp/homework.log
+timeout 30 ros2 launch homework bitcoin_subscribe.launch.py > /tmp/homework.log
 
-sleep 5
-
-ros2 topic echo /bitcoin_price |
+cat /tmp/homework.log |
 grep 'bitcoin_price:'
