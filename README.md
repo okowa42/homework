@@ -31,7 +31,7 @@ ros2 run homework bitcoin_publisher
 ros2 topic echo /bitcoin_price 
 ```
 ```
-data: 'bitcoin_price: 97995.0 USD'
+data: 'bitcoin_price: 97905.0 USD'
 ---
 data: 'bitcoin_price: 97995.0 USD'
 ---
