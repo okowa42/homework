@@ -34,14 +34,23 @@ class BitcoinPublisher(Node):
         except requests.exceptions.HTTPError as e:
             # レートリミットエラー対応
             if e.response.status_code == 429:
-                self.get_logger().error("Rate limit exceeded. Retrying after delay...")
+                error_msg = f"Rate limit exceeded. Retrying after delay... ({e})"
+                msg = String()
+                msg.data = f"bitcoin_price: ERROR - {error_msg}"  # エラーメッセージを送信
+                self.publisher_.publish(msg)
                 time.sleep(60)  # 60秒待機して再試行
             else:
-                self.get_logger().error(f"HTTP error occurred: {e}")
+                error_msg = f"HTTP error occurred: {e}"
+                msg = String()
+                msg.data = f"bitcoin_price: ERROR - {error_msg}"  # エラーメッセージを送信
+                self.publisher_.publish(msg)
 
         except (requests.RequestException, KeyError, ValueError) as e:
-            # その他のエラーをログに記録
-            self.get_logger().error(f"Failed to fetch Bitcoin price: {e}")
+            # その他のエラーが発生した場合
+            error_msg = f"Failed to fetch Bitcoin price: {e}"
+            msg = String()
+            msg.data = f"bitcoin_price: ERROR - {error_msg}"  # エラーメッセージを送信
+            self.publisher_.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)
