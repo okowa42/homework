@@ -39,6 +39,13 @@ data: 'bitcoin_price: 97995.0 USD'
 data: 'bitcoin_price: 97995.0 USD'
 ---
 ```
+CoinGeckoにアクセスする上で何らかの問題が生じた場合はトピックにエラーメッセージが表示されます.
+CoinGecko APiでは, 1分間に100回のリクエストが許容上限になっているため, その上限を超えてしまってアクセスができなかった場合は次のようなエラーメッセージをトピックに出力し, アクセスを1分間待機します.
+```
+data: 'bitcoin_price: ERROR - Rate limit exceeded. Retrying after delay... (429 Client Error: Too Many Requests for url: https://api.co...'
+---
+data: 'bitcoin_price: 97675.0 USD'
+```
 
 ## 注意点
 subscriber.py，bitcoin_subscribe.launch.pyはテスト用のノードです．
