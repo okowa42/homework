@@ -52,4 +52,4 @@ subscriber.pyおよび，bitcoin_subscribe.launch.pyはテスト用です．
 - このパッケージのコードの一部は，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
     - [ryuichiueda/slides_marp/tree/master/robosys_2024](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024)
 
-© 2025 Soma Shirai 
+© 2025 Akari Hirohara 
