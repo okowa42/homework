@@ -18,15 +18,15 @@ bitcoin_price: {bitcoin_price} USD
 
 
 ## 使用方法
-ROS 2のパッケージです．各自のROS 2ワークスペースにて以下のコマンドでクローンし,その後ビルドしてください．
+ROS 2のパッケージです．ROS 2ワークスペースにて以下のコマンドでクローンし, ビルドしてください．
 ```
 git clone https://github.com/okowa42/homework.git
 ```
-実行は以下のコマンドで行えます．
+以下のコマンドで実行できます．
 ```
 ros2 run homework bitcoin_publisher
 ```
-トピックの内容は以下のコマンドで確認してください
+トピックの内容は以下のコマンドで確認できます.
 ```
 ros2 topic echo /bitcoin_price 
 ```
@@ -40,7 +40,7 @@ data: 'bitcoin_price: 97995.0 USD'
 ```
 
 ## 注意点
-subscriber.pyおよび，bitcoin_subscribe.launch.pyはテスト用です．
+subscriber.py，bitcoin_subscribe.launch.pyはテスト用のノードです．
 
 ## テスト済み環境
 - Ubuntu 22.04 LTS
