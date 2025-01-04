@@ -6,11 +6,11 @@
 - [CoinGecko](https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd)から取得したビットコインの現在の米ドル価格をトピックにパブリッシュします.
 
 ## ノード
-- ### bitcoin_publisher
+### bitcoin_publisher
 取得したビットコインの現在の米ドル価格を10秒毎にbitcoin_priceトピックにパブリッシュします．
 
 ## トピック
-- ### bitcoin_price
+### bitcoin_price
 bitcoin_publisherノードからパブリッシュされた以下の情報を持ちます．
 ```
 bitcoin_price: {bitcoin_price} USD
