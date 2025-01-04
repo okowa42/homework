@@ -11,7 +11,7 @@
 
 ## トピック
 - ### bitcoin_price
-bitcoin_publisherノードからパブリッシュされた，以下の形式の情報を持ちます．
+bitcoin_publisherノードからパブリッシュされた以下の情報を持ちます．
 ```
 bitcoin_price: {bitcoin_price} USD
 ```
