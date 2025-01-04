@@ -31,9 +31,6 @@ class BitcoinPublisher(Node):
             msg.data = f"bitcoin_price: {bitcoin_price} USD"
             self.publisher_.publish(msg)
 
-            # ログにも出力
-            self.get_logger().info(f"Published: {msg.data}")
-
         except requests.exceptions.HTTPError as e:
             # レートリミットエラー対応
             if e.response.status_code == 429:

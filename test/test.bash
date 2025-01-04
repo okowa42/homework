@@ -5,10 +5,12 @@
 dir=~
 [ "$1" != "" ] && dir="$1"
 
-cd /ros2_ws
-colcon build
+cd $dir/ros2_ws
+colcon build || { echo "Build failed"; exit 1; }
 source $dir/.bashrc
 timeout 30 ros2 run homework bitcoin_publisher > /tmp/homework.log
 
-cat /tmp/homework.log |
+sleep 5
+
+ros2 topic echo /bitcoin_price |
 grep 'bitcoin_price:'
