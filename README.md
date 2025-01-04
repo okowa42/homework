@@ -3,7 +3,7 @@
 
 ## 概要
 - ROS 2のパッケージです.
-- [Open Notify API](https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd)より取得したビットコインの米ドル価格をトピックにパブリッシュします.
+- [CoinGecko](https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd)より取得したビットコインの米ドル価格をトピックにパブリッシュします.
 
 ## ノード
 - ### bitcoin_publisher
